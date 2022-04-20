@@ -9,15 +9,15 @@ const audioPlayer8 = document.querySelector(".player8");
 const audioPlayer9 = document.querySelector(".player9");
 
 //Audio files
-const audio = new Audio("http://127.0.0.1:5500/assets/_tambourine_shake_higher.mp3");
-const audio2 = new Audio("http://127.0.0.1:5500/assets/HIGH%20VOC.mp3");
-const audio3 = new Audio("http://127.0.0.1:5500/assets/ALL%20TRACK.mp3");
-const audio4 = new Audio("http://127.0.0.1:5500/assets/B%20VOC.mp3");
-const audio5 = new Audio("http://127.0.0.1:5500/assets/DRUMS.mp3");
-const audio6 = new Audio("http://127.0.0.1:5500/assets/HE%20HE%20VOC.mp3");
-const audio7 = new Audio("http://127.0.0.1:5500/assets/JIBRISH.mp3");
-const audio8 = new Audio("http://127.0.0.1:5500/assets/LEAD%201.mp3");
-const audio9 = new Audio("http://127.0.0.1:5500/assets/UUHO%20VOC.mp3");
+const audio = new Audio("../assets/_tambourine_shake_higher.mp3");
+const audio2 = new Audio("../assets/HIGH%20VOC.mp3");
+const audio3 = new Audio("../assets/ALL%20TRACK.mp3");
+const audio4 = new Audio("../assets/B%20VOC.mp3");
+const audio5 = new Audio("../assets/DRUMS.mp3");
+const audio6 = new Audio("../assets/HE%20HE%20VOC.mp3");
+const audio7 = new Audio("../assets/JIBRISH.mp3");
+const audio8 = new Audio("../assets/LEAD%201.mp3");
+const audio9 = new Audio("../assets/UUHO%20VOC.mp3");
 
 const loopFun = () => {
   if (audio.loop == true || audio2.loop == true || audio3.loop == true || audio4.loop == true || audio5.loop == true || audio6.loop == true || audio7.loop == true || audio8.loop == true || audio9.loop == true) {
