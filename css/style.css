@@ -1,0 +1,804 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  background: #ccc;
+}
+
+.audio-player {
+  height: 100px;
+  width: 100%;
+  max-width: 450px;
+  background: #444;
+  -webkit-box-shadow: 0 0 20px 0 #000a;
+  box-shadow: 0 0 20px 0 #000a;
+  font-family: arial;
+  color: white;
+  font-size: 0.75em;
+  overflow: hidden;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 6px auto;
+  grid-template-rows: 6px auto;
+}
+
+.audio-player .timeline,
+.audio-player .timeline2,
+.audio-player .timeline3,
+.audio-player .timeline4,
+.audio-player .timeline5,
+.audio-player .timeline6,
+.audio-player .timeline7,
+.audio-player .timeline8,
+.audio-player .timeline9 {
+  background: white;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 10px 0 #0008;
+  box-shadow: 0 2px 10px 0 #0008;
+}
+
+.audio-player .timeline .progress,
+.audio-player .timeline .progress2,
+.audio-player .timeline .progress3,
+.audio-player .timeline .progress4,
+.audio-player .timeline .progress5,
+.audio-player .timeline .progress6,
+.audio-player .timeline .progress7,
+.audio-player .timeline .progress8,
+.audio-player .timeline .progress9,
+.audio-player .timeline2 .progress,
+.audio-player .timeline2 .progress2,
+.audio-player .timeline2 .progress3,
+.audio-player .timeline2 .progress4,
+.audio-player .timeline2 .progress5,
+.audio-player .timeline2 .progress6,
+.audio-player .timeline2 .progress7,
+.audio-player .timeline2 .progress8,
+.audio-player .timeline2 .progress9,
+.audio-player .timeline3 .progress,
+.audio-player .timeline3 .progress2,
+.audio-player .timeline3 .progress3,
+.audio-player .timeline3 .progress4,
+.audio-player .timeline3 .progress5,
+.audio-player .timeline3 .progress6,
+.audio-player .timeline3 .progress7,
+.audio-player .timeline3 .progress8,
+.audio-player .timeline3 .progress9,
+.audio-player .timeline4 .progress,
+.audio-player .timeline4 .progress2,
+.audio-player .timeline4 .progress3,
+.audio-player .timeline4 .progress4,
+.audio-player .timeline4 .progress5,
+.audio-player .timeline4 .progress6,
+.audio-player .timeline4 .progress7,
+.audio-player .timeline4 .progress8,
+.audio-player .timeline4 .progress9,
+.audio-player .timeline5 .progress,
+.audio-player .timeline5 .progress2,
+.audio-player .timeline5 .progress3,
+.audio-player .timeline5 .progress4,
+.audio-player .timeline5 .progress5,
+.audio-player .timeline5 .progress6,
+.audio-player .timeline5 .progress7,
+.audio-player .timeline5 .progress8,
+.audio-player .timeline5 .progress9,
+.audio-player .timeline6 .progress,
+.audio-player .timeline6 .progress2,
+.audio-player .timeline6 .progress3,
+.audio-player .timeline6 .progress4,
+.audio-player .timeline6 .progress5,
+.audio-player .timeline6 .progress6,
+.audio-player .timeline6 .progress7,
+.audio-player .timeline6 .progress8,
+.audio-player .timeline6 .progress9,
+.audio-player .timeline7 .progress,
+.audio-player .timeline7 .progress2,
+.audio-player .timeline7 .progress3,
+.audio-player .timeline7 .progress4,
+.audio-player .timeline7 .progress5,
+.audio-player .timeline7 .progress6,
+.audio-player .timeline7 .progress7,
+.audio-player .timeline7 .progress8,
+.audio-player .timeline7 .progress9,
+.audio-player .timeline8 .progress,
+.audio-player .timeline8 .progress2,
+.audio-player .timeline8 .progress3,
+.audio-player .timeline8 .progress4,
+.audio-player .timeline8 .progress5,
+.audio-player .timeline8 .progress6,
+.audio-player .timeline8 .progress7,
+.audio-player .timeline8 .progress8,
+.audio-player .timeline8 .progress9,
+.audio-player .timeline9 .progress,
+.audio-player .timeline9 .progress2,
+.audio-player .timeline9 .progress3,
+.audio-player .timeline9 .progress4,
+.audio-player .timeline9 .progress5,
+.audio-player .timeline9 .progress6,
+.audio-player .timeline9 .progress7,
+.audio-player .timeline9 .progress8,
+.audio-player .timeline9 .progress9 {
+  background: coral;
+  width: 0%;
+  height: 100%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  position: relative;
+}
+
+.audio-player .timeline .progress span,
+.audio-player .timeline .progress2 span,
+.audio-player .timeline .progress3 span,
+.audio-player .timeline .progress4 span,
+.audio-player .timeline .progress5 span,
+.audio-player .timeline .progress6 span,
+.audio-player .timeline .progress7 span,
+.audio-player .timeline .progress8 span,
+.audio-player .timeline .progress9 span,
+.audio-player .timeline2 .progress span,
+.audio-player .timeline2 .progress2 span,
+.audio-player .timeline2 .progress3 span,
+.audio-player .timeline2 .progress4 span,
+.audio-player .timeline2 .progress5 span,
+.audio-player .timeline2 .progress6 span,
+.audio-player .timeline2 .progress7 span,
+.audio-player .timeline2 .progress8 span,
+.audio-player .timeline2 .progress9 span,
+.audio-player .timeline3 .progress span,
+.audio-player .timeline3 .progress2 span,
+.audio-player .timeline3 .progress3 span,
+.audio-player .timeline3 .progress4 span,
+.audio-player .timeline3 .progress5 span,
+.audio-player .timeline3 .progress6 span,
+.audio-player .timeline3 .progress7 span,
+.audio-player .timeline3 .progress8 span,
+.audio-player .timeline3 .progress9 span,
+.audio-player .timeline4 .progress span,
+.audio-player .timeline4 .progress2 span,
+.audio-player .timeline4 .progress3 span,
+.audio-player .timeline4 .progress4 span,
+.audio-player .timeline4 .progress5 span,
+.audio-player .timeline4 .progress6 span,
+.audio-player .timeline4 .progress7 span,
+.audio-player .timeline4 .progress8 span,
+.audio-player .timeline4 .progress9 span,
+.audio-player .timeline5 .progress span,
+.audio-player .timeline5 .progress2 span,
+.audio-player .timeline5 .progress3 span,
+.audio-player .timeline5 .progress4 span,
+.audio-player .timeline5 .progress5 span,
+.audio-player .timeline5 .progress6 span,
+.audio-player .timeline5 .progress7 span,
+.audio-player .timeline5 .progress8 span,
+.audio-player .timeline5 .progress9 span,
+.audio-player .timeline6 .progress span,
+.audio-player .timeline6 .progress2 span,
+.audio-player .timeline6 .progress3 span,
+.audio-player .timeline6 .progress4 span,
+.audio-player .timeline6 .progress5 span,
+.audio-player .timeline6 .progress6 span,
+.audio-player .timeline6 .progress7 span,
+.audio-player .timeline6 .progress8 span,
+.audio-player .timeline6 .progress9 span,
+.audio-player .timeline7 .progress span,
+.audio-player .timeline7 .progress2 span,
+.audio-player .timeline7 .progress3 span,
+.audio-player .timeline7 .progress4 span,
+.audio-player .timeline7 .progress5 span,
+.audio-player .timeline7 .progress6 span,
+.audio-player .timeline7 .progress7 span,
+.audio-player .timeline7 .progress8 span,
+.audio-player .timeline7 .progress9 span,
+.audio-player .timeline8 .progress span,
+.audio-player .timeline8 .progress2 span,
+.audio-player .timeline8 .progress3 span,
+.audio-player .timeline8 .progress4 span,
+.audio-player .timeline8 .progress5 span,
+.audio-player .timeline8 .progress6 span,
+.audio-player .timeline8 .progress7 span,
+.audio-player .timeline8 .progress8 span,
+.audio-player .timeline8 .progress9 span,
+.audio-player .timeline9 .progress span,
+.audio-player .timeline9 .progress2 span,
+.audio-player .timeline9 .progress3 span,
+.audio-player .timeline9 .progress4 span,
+.audio-player .timeline9 .progress5 span,
+.audio-player .timeline9 .progress6 span,
+.audio-player .timeline9 .progress7 span,
+.audio-player .timeline9 .progress8 span,
+.audio-player .timeline9 .progress9 span {
+  position: absolute;
+  right: 0px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  background-color: yellow;
+  width: 10px;
+  z-index: 1000;
+  height: 10px;
+  bottom: 0px;
+}
+
+.audio-player .controls,
+.audio-player .controls2,
+.audio-player .controls3,
+.audio-player .controls4,
+.audio-player .controls5,
+.audio-player .controls6,
+.audio-player .controls7,
+.audio-player .controls8,
+.audio-player .controls9 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0 20px;
+}
+
+.audio-player .controls > *,
+.audio-player .controls2 > *,
+.audio-player .controls3 > *,
+.audio-player .controls4 > *,
+.audio-player .controls5 > *,
+.audio-player .controls6 > *,
+.audio-player .controls7 > *,
+.audio-player .controls8 > *,
+.audio-player .controls9 > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.audio-player .controls .toggle-play.play,
+.audio-player .controls2 .toggle-play.play,
+.audio-player .controls3 .toggle-play.play,
+.audio-player .controls4 .toggle-play.play,
+.audio-player .controls5 .toggle-play.play,
+.audio-player .controls6 .toggle-play.play,
+.audio-player .controls7 .toggle-play.play,
+.audio-player .controls8 .toggle-play.play,
+.audio-player .controls9 .toggle-play.play {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid #0000;
+  border-left: 13px solid white;
+}
+
+.audio-player .controls .toggle-play.play:hover,
+.audio-player .controls2 .toggle-play.play:hover,
+.audio-player .controls3 .toggle-play.play:hover,
+.audio-player .controls4 .toggle-play.play:hover,
+.audio-player .controls5 .toggle-play.play:hover,
+.audio-player .controls6 .toggle-play.play:hover,
+.audio-player .controls7 .toggle-play.play:hover,
+.audio-player .controls8 .toggle-play.play:hover,
+.audio-player .controls9 .toggle-play.play:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.audio-player .controls .toggle-play.pause,
+.audio-player .controls2 .toggle-play.pause,
+.audio-player .controls3 .toggle-play.pause,
+.audio-player .controls4 .toggle-play.pause,
+.audio-player .controls5 .toggle-play.pause,
+.audio-player .controls6 .toggle-play.pause,
+.audio-player .controls7 .toggle-play.pause,
+.audio-player .controls8 .toggle-play.pause,
+.audio-player .controls9 .toggle-play.pause {
+  height: 15px;
+  width: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.audio-player .controls .toggle-play.pause:before,
+.audio-player .controls2 .toggle-play.pause:before,
+.audio-player .controls3 .toggle-play.pause:before,
+.audio-player .controls4 .toggle-play.pause:before,
+.audio-player .controls5 .toggle-play.pause:before,
+.audio-player .controls6 .toggle-play.pause:before,
+.audio-player .controls7 .toggle-play.pause:before,
+.audio-player .controls8 .toggle-play.pause:before,
+.audio-player .controls9 .toggle-play.pause:before {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+
+.audio-player .controls .toggle-play.pause:after,
+.audio-player .controls2 .toggle-play.pause:after,
+.audio-player .controls3 .toggle-play.pause:after,
+.audio-player .controls4 .toggle-play.pause:after,
+.audio-player .controls5 .toggle-play.pause:after,
+.audio-player .controls6 .toggle-play.pause:after,
+.audio-player .controls7 .toggle-play.pause:after,
+.audio-player .controls8 .toggle-play.pause:after,
+.audio-player .controls9 .toggle-play.pause:after {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+
+.audio-player .controls .toggle-play.pause:hover,
+.audio-player .controls2 .toggle-play.pause:hover,
+.audio-player .controls3 .toggle-play.pause:hover,
+.audio-player .controls4 .toggle-play.pause:hover,
+.audio-player .controls5 .toggle-play.pause:hover,
+.audio-player .controls6 .toggle-play.pause:hover,
+.audio-player .controls7 .toggle-play.pause:hover,
+.audio-player .controls8 .toggle-play.pause:hover,
+.audio-player .controls9 .toggle-play.pause:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.audio-player .controls .time,
+.audio-player .controls .time2,
+.audio-player .controls .time3,
+.audio-player .controls .time4,
+.audio-player .controls .time5,
+.audio-player .controls .time6,
+.audio-player .controls .time7,
+.audio-player .controls .time8,
+.audio-player .controls .time9,
+.audio-player .controls2 .time,
+.audio-player .controls2 .time2,
+.audio-player .controls2 .time3,
+.audio-player .controls2 .time4,
+.audio-player .controls2 .time5,
+.audio-player .controls2 .time6,
+.audio-player .controls2 .time7,
+.audio-player .controls2 .time8,
+.audio-player .controls2 .time9,
+.audio-player .controls3 .time,
+.audio-player .controls3 .time2,
+.audio-player .controls3 .time3,
+.audio-player .controls3 .time4,
+.audio-player .controls3 .time5,
+.audio-player .controls3 .time6,
+.audio-player .controls3 .time7,
+.audio-player .controls3 .time8,
+.audio-player .controls3 .time9,
+.audio-player .controls4 .time,
+.audio-player .controls4 .time2,
+.audio-player .controls4 .time3,
+.audio-player .controls4 .time4,
+.audio-player .controls4 .time5,
+.audio-player .controls4 .time6,
+.audio-player .controls4 .time7,
+.audio-player .controls4 .time8,
+.audio-player .controls4 .time9,
+.audio-player .controls5 .time,
+.audio-player .controls5 .time2,
+.audio-player .controls5 .time3,
+.audio-player .controls5 .time4,
+.audio-player .controls5 .time5,
+.audio-player .controls5 .time6,
+.audio-player .controls5 .time7,
+.audio-player .controls5 .time8,
+.audio-player .controls5 .time9,
+.audio-player .controls6 .time,
+.audio-player .controls6 .time2,
+.audio-player .controls6 .time3,
+.audio-player .controls6 .time4,
+.audio-player .controls6 .time5,
+.audio-player .controls6 .time6,
+.audio-player .controls6 .time7,
+.audio-player .controls6 .time8,
+.audio-player .controls6 .time9,
+.audio-player .controls7 .time,
+.audio-player .controls7 .time2,
+.audio-player .controls7 .time3,
+.audio-player .controls7 .time4,
+.audio-player .controls7 .time5,
+.audio-player .controls7 .time6,
+.audio-player .controls7 .time7,
+.audio-player .controls7 .time8,
+.audio-player .controls7 .time9,
+.audio-player .controls8 .time,
+.audio-player .controls8 .time2,
+.audio-player .controls8 .time3,
+.audio-player .controls8 .time4,
+.audio-player .controls8 .time5,
+.audio-player .controls8 .time6,
+.audio-player .controls8 .time7,
+.audio-player .controls8 .time8,
+.audio-player .controls8 .time9,
+.audio-player .controls9 .time,
+.audio-player .controls9 .time2,
+.audio-player .controls9 .time3,
+.audio-player .controls9 .time4,
+.audio-player .controls9 .time5,
+.audio-player .controls9 .time6,
+.audio-player .controls9 .time7,
+.audio-player .controls9 .time8,
+.audio-player .controls9 .time9 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.audio-player .controls .time > *,
+.audio-player .controls .time2 > *,
+.audio-player .controls .time3 > *,
+.audio-player .controls .time4 > *,
+.audio-player .controls .time5 > *,
+.audio-player .controls .time6 > *,
+.audio-player .controls .time7 > *,
+.audio-player .controls .time8 > *,
+.audio-player .controls .time9 > *,
+.audio-player .controls2 .time > *,
+.audio-player .controls2 .time2 > *,
+.audio-player .controls2 .time3 > *,
+.audio-player .controls2 .time4 > *,
+.audio-player .controls2 .time5 > *,
+.audio-player .controls2 .time6 > *,
+.audio-player .controls2 .time7 > *,
+.audio-player .controls2 .time8 > *,
+.audio-player .controls2 .time9 > *,
+.audio-player .controls3 .time > *,
+.audio-player .controls3 .time2 > *,
+.audio-player .controls3 .time3 > *,
+.audio-player .controls3 .time4 > *,
+.audio-player .controls3 .time5 > *,
+.audio-player .controls3 .time6 > *,
+.audio-player .controls3 .time7 > *,
+.audio-player .controls3 .time8 > *,
+.audio-player .controls3 .time9 > *,
+.audio-player .controls4 .time > *,
+.audio-player .controls4 .time2 > *,
+.audio-player .controls4 .time3 > *,
+.audio-player .controls4 .time4 > *,
+.audio-player .controls4 .time5 > *,
+.audio-player .controls4 .time6 > *,
+.audio-player .controls4 .time7 > *,
+.audio-player .controls4 .time8 > *,
+.audio-player .controls4 .time9 > *,
+.audio-player .controls5 .time > *,
+.audio-player .controls5 .time2 > *,
+.audio-player .controls5 .time3 > *,
+.audio-player .controls5 .time4 > *,
+.audio-player .controls5 .time5 > *,
+.audio-player .controls5 .time6 > *,
+.audio-player .controls5 .time7 > *,
+.audio-player .controls5 .time8 > *,
+.audio-player .controls5 .time9 > *,
+.audio-player .controls6 .time > *,
+.audio-player .controls6 .time2 > *,
+.audio-player .controls6 .time3 > *,
+.audio-player .controls6 .time4 > *,
+.audio-player .controls6 .time5 > *,
+.audio-player .controls6 .time6 > *,
+.audio-player .controls6 .time7 > *,
+.audio-player .controls6 .time8 > *,
+.audio-player .controls6 .time9 > *,
+.audio-player .controls7 .time > *,
+.audio-player .controls7 .time2 > *,
+.audio-player .controls7 .time3 > *,
+.audio-player .controls7 .time4 > *,
+.audio-player .controls7 .time5 > *,
+.audio-player .controls7 .time6 > *,
+.audio-player .controls7 .time7 > *,
+.audio-player .controls7 .time8 > *,
+.audio-player .controls7 .time9 > *,
+.audio-player .controls8 .time > *,
+.audio-player .controls8 .time2 > *,
+.audio-player .controls8 .time3 > *,
+.audio-player .controls8 .time4 > *,
+.audio-player .controls8 .time5 > *,
+.audio-player .controls8 .time6 > *,
+.audio-player .controls8 .time7 > *,
+.audio-player .controls8 .time8 > *,
+.audio-player .controls8 .time9 > *,
+.audio-player .controls9 .time > *,
+.audio-player .controls9 .time2 > *,
+.audio-player .controls9 .time3 > *,
+.audio-player .controls9 .time4 > *,
+.audio-player .controls9 .time5 > *,
+.audio-player .controls9 .time6 > *,
+.audio-player .controls9 .time7 > *,
+.audio-player .controls9 .time8 > *,
+.audio-player .controls9 .time9 > * {
+  padding: 2px;
+}
+
+.audio-player .controls .volume-container,
+.audio-player .controls .volume-container2,
+.audio-player .controls .volume-container3,
+.audio-player .controls .volume-container4,
+.audio-player .controls .volume-container5,
+.audio-player .controls .volume-container6,
+.audio-player .controls .volume-container7,
+.audio-player .controls .volume-container8,
+.audio-player .controls .volume-container9,
+.audio-player .controls2 .volume-container,
+.audio-player .controls2 .volume-container2,
+.audio-player .controls2 .volume-container3,
+.audio-player .controls2 .volume-container4,
+.audio-player .controls2 .volume-container5,
+.audio-player .controls2 .volume-container6,
+.audio-player .controls2 .volume-container7,
+.audio-player .controls2 .volume-container8,
+.audio-player .controls2 .volume-container9,
+.audio-player .controls3 .volume-container,
+.audio-player .controls3 .volume-container2,
+.audio-player .controls3 .volume-container3,
+.audio-player .controls3 .volume-container4,
+.audio-player .controls3 .volume-container5,
+.audio-player .controls3 .volume-container6,
+.audio-player .controls3 .volume-container7,
+.audio-player .controls3 .volume-container8,
+.audio-player .controls3 .volume-container9,
+.audio-player .controls4 .volume-container,
+.audio-player .controls4 .volume-container2,
+.audio-player .controls4 .volume-container3,
+.audio-player .controls4 .volume-container4,
+.audio-player .controls4 .volume-container5,
+.audio-player .controls4 .volume-container6,
+.audio-player .controls4 .volume-container7,
+.audio-player .controls4 .volume-container8,
+.audio-player .controls4 .volume-container9,
+.audio-player .controls5 .volume-container,
+.audio-player .controls5 .volume-container2,
+.audio-player .controls5 .volume-container3,
+.audio-player .controls5 .volume-container4,
+.audio-player .controls5 .volume-container5,
+.audio-player .controls5 .volume-container6,
+.audio-player .controls5 .volume-container7,
+.audio-player .controls5 .volume-container8,
+.audio-player .controls5 .volume-container9,
+.audio-player .controls6 .volume-container,
+.audio-player .controls6 .volume-container2,
+.audio-player .controls6 .volume-container3,
+.audio-player .controls6 .volume-container4,
+.audio-player .controls6 .volume-container5,
+.audio-player .controls6 .volume-container6,
+.audio-player .controls6 .volume-container7,
+.audio-player .controls6 .volume-container8,
+.audio-player .controls6 .volume-container9,
+.audio-player .controls7 .volume-container,
+.audio-player .controls7 .volume-container2,
+.audio-player .controls7 .volume-container3,
+.audio-player .controls7 .volume-container4,
+.audio-player .controls7 .volume-container5,
+.audio-player .controls7 .volume-container6,
+.audio-player .controls7 .volume-container7,
+.audio-player .controls7 .volume-container8,
+.audio-player .controls7 .volume-container9,
+.audio-player .controls8 .volume-container,
+.audio-player .controls8 .volume-container2,
+.audio-player .controls8 .volume-container3,
+.audio-player .controls8 .volume-container4,
+.audio-player .controls8 .volume-container5,
+.audio-player .controls8 .volume-container6,
+.audio-player .controls8 .volume-container7,
+.audio-player .controls8 .volume-container8,
+.audio-player .controls8 .volume-container9,
+.audio-player .controls9 .volume-container,
+.audio-player .controls9 .volume-container2,
+.audio-player .controls9 .volume-container3,
+.audio-player .controls9 .volume-container4,
+.audio-player .controls9 .volume-container5,
+.audio-player .controls9 .volume-container6,
+.audio-player .controls9 .volume-container7,
+.audio-player .controls9 .volume-container8,
+.audio-player .controls9 .volume-container9 {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.audio-player .controls .volume-container .volume-button,
+.audio-player .controls .volume-container2 .volume-button,
+.audio-player .controls .volume-container3 .volume-button,
+.audio-player .controls .volume-container4 .volume-button,
+.audio-player .controls .volume-container5 .volume-button,
+.audio-player .controls .volume-container6 .volume-button,
+.audio-player .controls .volume-container7 .volume-button,
+.audio-player .controls .volume-container8 .volume-button,
+.audio-player .controls .volume-container9 .volume-button,
+.audio-player .controls2 .volume-container .volume-button,
+.audio-player .controls2 .volume-container2 .volume-button,
+.audio-player .controls2 .volume-container3 .volume-button,
+.audio-player .controls2 .volume-container4 .volume-button,
+.audio-player .controls2 .volume-container5 .volume-button,
+.audio-player .controls2 .volume-container6 .volume-button,
+.audio-player .controls2 .volume-container7 .volume-button,
+.audio-player .controls2 .volume-container8 .volume-button,
+.audio-player .controls2 .volume-container9 .volume-button,
+.audio-player .controls3 .volume-container .volume-button,
+.audio-player .controls3 .volume-container2 .volume-button,
+.audio-player .controls3 .volume-container3 .volume-button,
+.audio-player .controls3 .volume-container4 .volume-button,
+.audio-player .controls3 .volume-container5 .volume-button,
+.audio-player .controls3 .volume-container6 .volume-button,
+.audio-player .controls3 .volume-container7 .volume-button,
+.audio-player .controls3 .volume-container8 .volume-button,
+.audio-player .controls3 .volume-container9 .volume-button,
+.audio-player .controls4 .volume-container .volume-button,
+.audio-player .controls4 .volume-container2 .volume-button,
+.audio-player .controls4 .volume-container3 .volume-button,
+.audio-player .controls4 .volume-container4 .volume-button,
+.audio-player .controls4 .volume-container5 .volume-button,
+.audio-player .controls4 .volume-container6 .volume-button,
+.audio-player .controls4 .volume-container7 .volume-button,
+.audio-player .controls4 .volume-container8 .volume-button,
+.audio-player .controls4 .volume-container9 .volume-button,
+.audio-player .controls5 .volume-container .volume-button,
+.audio-player .controls5 .volume-container2 .volume-button,
+.audio-player .controls5 .volume-container3 .volume-button,
+.audio-player .controls5 .volume-container4 .volume-button,
+.audio-player .controls5 .volume-container5 .volume-button,
+.audio-player .controls5 .volume-container6 .volume-button,
+.audio-player .controls5 .volume-container7 .volume-button,
+.audio-player .controls5 .volume-container8 .volume-button,
+.audio-player .controls5 .volume-container9 .volume-button,
+.audio-player .controls6 .volume-container .volume-button,
+.audio-player .controls6 .volume-container2 .volume-button,
+.audio-player .controls6 .volume-container3 .volume-button,
+.audio-player .controls6 .volume-container4 .volume-button,
+.audio-player .controls6 .volume-container5 .volume-button,
+.audio-player .controls6 .volume-container6 .volume-button,
+.audio-player .controls6 .volume-container7 .volume-button,
+.audio-player .controls6 .volume-container8 .volume-button,
+.audio-player .controls6 .volume-container9 .volume-button,
+.audio-player .controls7 .volume-container .volume-button,
+.audio-player .controls7 .volume-container2 .volume-button,
+.audio-player .controls7 .volume-container3 .volume-button,
+.audio-player .controls7 .volume-container4 .volume-button,
+.audio-player .controls7 .volume-container5 .volume-button,
+.audio-player .controls7 .volume-container6 .volume-button,
+.audio-player .controls7 .volume-container7 .volume-button,
+.audio-player .controls7 .volume-container8 .volume-button,
+.audio-player .controls7 .volume-container9 .volume-button,
+.audio-player .controls8 .volume-container .volume-button,
+.audio-player .controls8 .volume-container2 .volume-button,
+.audio-player .controls8 .volume-container3 .volume-button,
+.audio-player .controls8 .volume-container4 .volume-button,
+.audio-player .controls8 .volume-container5 .volume-button,
+.audio-player .controls8 .volume-container6 .volume-button,
+.audio-player .controls8 .volume-container7 .volume-button,
+.audio-player .controls8 .volume-container8 .volume-button,
+.audio-player .controls8 .volume-container9 .volume-button,
+.audio-player .controls9 .volume-container .volume-button,
+.audio-player .controls9 .volume-container2 .volume-button,
+.audio-player .controls9 .volume-container3 .volume-button,
+.audio-player .controls9 .volume-container4 .volume-button,
+.audio-player .controls9 .volume-container5 .volume-button,
+.audio-player .controls9 .volume-container6 .volume-button,
+.audio-player .controls9 .volume-container7 .volume-button,
+.audio-player .controls9 .volume-container8 .volume-button,
+.audio-player .controls9 .volume-container9 .volume-button {
+  height: 26px;
+  width: 26px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.audio-player .controls .volume-container .volume-button .volume,
+.audio-player .controls .volume-container2 .volume-button .volume,
+.audio-player .controls .volume-container3 .volume-button .volume,
+.audio-player .controls .volume-container4 .volume-button .volume,
+.audio-player .controls .volume-container5 .volume-button .volume,
+.audio-player .controls .volume-container6 .volume-button .volume,
+.audio-player .controls .volume-container7 .volume-button .volume,
+.audio-player .controls .volume-container8 .volume-button .volume,
+.audio-player .controls .volume-container9 .volume-button .volume,
+.audio-player .controls2 .volume-container .volume-button .volume,
+.audio-player .controls2 .volume-container2 .volume-button .volume,
+.audio-player .controls2 .volume-container3 .volume-button .volume,
+.audio-player .controls2 .volume-container4 .volume-button .volume,
+.audio-player .controls2 .volume-container5 .volume-button .volume,
+.audio-player .controls2 .volume-container6 .volume-button .volume,
+.audio-player .controls2 .volume-container7 .volume-button .volume,
+.audio-player .controls2 .volume-container8 .volume-button .volume,
+.audio-player .controls2 .volume-container9 .volume-button .volume,
+.audio-player .controls3 .volume-container .volume-button .volume,
+.audio-player .controls3 .volume-container2 .volume-button .volume,
+.audio-player .controls3 .volume-container3 .volume-button .volume,
+.audio-player .controls3 .volume-container4 .volume-button .volume,
+.audio-player .controls3 .volume-container5 .volume-button .volume,
+.audio-player .controls3 .volume-container6 .volume-button .volume,
+.audio-player .controls3 .volume-container7 .volume-button .volume,
+.audio-player .controls3 .volume-container8 .volume-button .volume,
+.audio-player .controls3 .volume-container9 .volume-button .volume,
+.audio-player .controls4 .volume-container .volume-button .volume,
+.audio-player .controls4 .volume-container2 .volume-button .volume,
+.audio-player .controls4 .volume-container3 .volume-button .volume,
+.audio-player .controls4 .volume-container4 .volume-button .volume,
+.audio-player .controls4 .volume-container5 .volume-button .volume,
+.audio-player .controls4 .volume-container6 .volume-button .volume,
+.audio-player .controls4 .volume-container7 .volume-button .volume,
+.audio-player .controls4 .volume-container8 .volume-button .volume,
+.audio-player .controls4 .volume-container9 .volume-button .volume,
+.audio-player .controls5 .volume-container .volume-button .volume,
+.audio-player .controls5 .volume-container2 .volume-button .volume,
+.audio-player .controls5 .volume-container3 .volume-button .volume,
+.audio-player .controls5 .volume-container4 .volume-button .volume,
+.audio-player .controls5 .volume-container5 .volume-button .volume,
+.audio-player .controls5 .volume-container6 .volume-button .volume,
+.audio-player .controls5 .volume-container7 .volume-button .volume,
+.audio-player .controls5 .volume-container8 .volume-button .volume,
+.audio-player .controls5 .volume-container9 .volume-button .volume,
+.audio-player .controls6 .volume-container .volume-button .volume,
+.audio-player .controls6 .volume-container2 .volume-button .volume,
+.audio-player .controls6 .volume-container3 .volume-button .volume,
+.audio-player .controls6 .volume-container4 .volume-button .volume,
+.audio-player .controls6 .volume-container5 .volume-button .volume,
+.audio-player .controls6 .volume-container6 .volume-button .volume,
+.audio-player .controls6 .volume-container7 .volume-button .volume,
+.audio-player .controls6 .volume-container8 .volume-button .volume,
+.audio-player .controls6 .volume-container9 .volume-button .volume,
+.audio-player .controls7 .volume-container .volume-button .volume,
+.audio-player .controls7 .volume-container2 .volume-button .volume,
+.audio-player .controls7 .volume-container3 .volume-button .volume,
+.audio-player .controls7 .volume-container4 .volume-button .volume,
+.audio-player .controls7 .volume-container5 .volume-button .volume,
+.audio-player .controls7 .volume-container6 .volume-button .volume,
+.audio-player .controls7 .volume-container7 .volume-button .volume,
+.audio-player .controls7 .volume-container8 .volume-button .volume,
+.audio-player .controls7 .volume-container9 .volume-button .volume,
+.audio-player .controls8 .volume-container .volume-button .volume,
+.audio-player .controls8 .volume-container2 .volume-button .volume,
+.audio-player .controls8 .volume-container3 .volume-button .volume,
+.audio-player .controls8 .volume-container4 .volume-button .volume,
+.audio-player .controls8 .volume-container5 .volume-button .volume,
+.audio-player .controls8 .volume-container6 .volume-button .volume,
+.audio-player .controls8 .volume-container7 .volume-button .volume,
+.audio-player .controls8 .volume-container8 .volume-button .volume,
+.audio-player .controls8 .volume-container9 .volume-button .volume,
+.audio-player .controls9 .volume-container .volume-button .volume,
+.audio-player .controls9 .volume-container2 .volume-button .volume,
+.audio-player .controls9 .volume-container3 .volume-button .volume,
+.audio-player .controls9 .volume-container4 .volume-button .volume,
+.audio-player .controls9 .volume-container5 .volume-button .volume,
+.audio-player .controls9 .volume-container6 .volume-button .volume,
+.audio-player .controls9 .volume-container7 .volume-button .volume,
+.audio-player .controls9 .volume-container8 .volume-button .volume,
+.audio-player .controls9 .volume-container9 .volume-button .volume {
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+}
+/*# sourceMappingURL=style.css.map */

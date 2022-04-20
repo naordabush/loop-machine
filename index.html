@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop Machine</title>
+    <link rel="stylesheet" href="icono.min.css" />
+    <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div style="width: 50px; height: 50px"></div>
+    <div class="audio-player player1">
+      <div class="timeline">
+        <div class="progress">
+          <span></span>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="play-container">
+          <div class="toggle-play play"></div>
+        </div>
+        <div class="time">
+          <div class="current">0:00</div>
+          <div class="divider">/</div>
+          <div class="length"></div>
+        </div>
+        <div class="name" id="loop" style="cursor: pointer">
+          <span onclick="loopFun()" style="background-color: coral; margin: 0px 5px; padding: 5px">Loop off</span>
+          <span onclick="offFun()" style="background-color: coral; margin: 0px 5px; padding: 5px">Loop on</span>
+          <span onclick="stop()" style="background-color: coral; margin: 0px 5px; padding: 5px">Stop</span>
+        </div>
+        <div class="volume-container">
+          <div class="volume-button">
+            <div class="volume icono-volumeMedium"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 50px; height: 50px"></div>
+    <div class="audio-player player2">
+      <div class="timeline2">
+        <div class="progress2"><span></span></div>
+      </div>
+      <div class="controls2">
+        <div class="time2">
+          <div class="current">0:00</div>
+          <div class="divider">/</div>
+          <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+        <div class="volume-container2">
+          <div class="volume-button2">
+            <div class="volume2 icono-volumeMedium"></div>
+          </div>
+
+          <div class="volume-slider2">
+            <div class="volume-percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 50px; height: 50px"></div>
+    <div class="audio-player player3">
+      <div class="timeline3">
+        <div class="progress3"><span></span></div>
+      </div>
+      <div class="controls3">
+        <div class="time3">
+          <div class="current">0:00</div>
+          <div class="divider">/</div>
+          <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+        <div class="volume-container3">
+          <div class="volume-button3">
+            <div class="volume3 icono-volumeMedium"></div>
+          </div>
+
+          <div class="volume-slider3">
+            <div class="volume-percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 50px; height: 50px"></div>
+    <div class="audio-player player4">
+      <div class="timeline4">
+        <div class="progress4"><span></span></div>
+      </div>
+      <div class="controls4">
+        <div class="time4">
+          <div class="current">0:00</div>
+          <div class="divider">/</div>
+          <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+
+        <div class="volume-container4">
+          <div class="volume-button4">
+            <div class="volume4 icono-volumeMedium"></div>
+          </div>
+
+          <div class="volume-slider4">
+            <div class="volume-percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 50px; height: 50px"></div>
+    <div class="audio-player player5">
+      <div class="timeline5">
+        <div class="progress5"><span></span></div>
+      </div>
+      <div class="controls5">
+        <div class="time5">
+          <div class="current">0:00</div>
+          <div class="divider">/</div>
+          <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+        <div class="volume-container5">
+          <div class="volume-button5">
+            <div class="volume5 icono-volumeMedium"></div>
+          </div>
+
+          <div class="volume-slider5">
+            <div class="volume-percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 50px; height: 50px"></div>
+    <div class="audio-player player6">
+      <div class="timeline6">
+        <div class="progress6"><span></span></div>
+      </div>
+      <div class="controls6">
+        <div class="time6">
+          <div class="current">0:00</div>
+          <div class="divider">/</div>
+          <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+        <div class="volume-container6">
+          <div class="volume-button6">
+            <div class="volume6 icono-volumeMedium"></div>
+          </div>
+
+          <div class="volume-slider6">
+            <div class="volume-percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width: 50px; height: 50px"></div>
+    <div class="audio-player player7">
+      <div class="timeline7">
+        <div class="progress7"><span></span></div>
+      </div>
+      <div class="controls7">
+        <div class="time7">
+          <div class="current">0:00</div>
+          <div class="divider">/</div>
+          <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+        <div class="volume-container7">
+          <div class="volume-button7">
+            <div class="volume7 icono-volumeMedium"></div>
+          </div>
+
+          <div class="volume-slider7">
+            <div class="volume-percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 50px; height: 50px"></div>
+    <div class="audio-player player8">
+      <div class="timeline8">
+        <div class="progress8"><span></span></div>
+      </div>
+      <div class="controls8">
+        <div class="time8">
+          <div class="current">0:00</div>
+          <div class="divider">/</div>
+          <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+        <div class="volume-container8">
+          <div class="volume-button8">
+            <div class="volume8 icono-volumeMedium"></div>
+          </div>
+
+          <div class="volume-slider8">
+            <div class="volume-percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 50px; height: 50px"></div>
+    <div class="audio-player player9">
+      <div class="timeline9">
+        <div class="progress9"><span></span></div>
+      </div>
+      <div class="controls9">
+        <div class="time9">
+          <div class="current">0:00</div>
+          <div class="divider">/</div>
+          <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+        <div class="volume-container9">
+          <div class="volume-button9">
+            <div class="volume9 icono-volumeMedium"></div>
+          </div>
+
+          <div class="volume-slider9">
+            <div class="volume-percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
